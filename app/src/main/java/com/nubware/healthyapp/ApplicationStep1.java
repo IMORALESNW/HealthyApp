@@ -63,11 +63,11 @@ public class ApplicationStep1 extends WizardStep {
         //Otros Controles
         provincesSpin = (Spinner) v.findViewById(R.id.dropProvince);
 
-        //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.provinces_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.provinces_array, android.R.layout.simple_spinner_item);
 
-        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        //provincesSpin.setAdapter(adapter);
+        provincesSpin.setAdapter(adapter);
 
         firstNameEt.setText(firstname);
         lastNameEt.setText(lastname);
