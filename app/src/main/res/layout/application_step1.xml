@@ -48,6 +48,7 @@
         android:layout_below="@+id/txtLastName"
         android:layout_toRightOf="@+id/txtFirstName"
         android:hint="@string/hint_city"
+        android:layout_toLeftOf="@+id/txtProfession"
         android:layout_toStartOf="@+id/txtProfession" />
 
     <Spinner
