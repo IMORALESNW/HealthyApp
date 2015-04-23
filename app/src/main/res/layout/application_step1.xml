@@ -1,62 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <EditText
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:hint="@string/hint_firstname"
+            android:id="@+id/txtFirstName"
+            android:layout_weight="0.3"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:hint="@string/hint_lastname"
+            android:id="@+id/txtLastName"
+            android:layout_weight="0.3"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:id="@+id/txtProfession"
+            android:hint="@string/hint_profession"
+            android:layout_weight="0.3"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:id="@+id/txtCity"
+            android:hint="@string/hint_city"
+            android:layout_weight="0.25"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:id="@+id/txtStreet"
+            android:hint="@string/hint_street"
+            android:layout_weight="0.25"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dropProvince"
+            android:layout_weight="0.25"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:id="@+id/txtPostalCode"
+            android:hint="@string/hint_postalcode"
+            android:layout_weight="0.25"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="@string/hint_homephone"
+            android:id="@+id/txtHomePhone"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="@string/hint_workphone"
+            android:id="@+id/txtWorkPhone"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="@string/hint_mobile"
+            android:id="@+id/txtMobile"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_mail"
+            android:id="@+id/txtEmail"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="@string/hint_firstname"
-        android:ems="10"
-        android:id="@+id/txtFirstName" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/receive_mail"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
 
-    <EditText
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="@string/hint_lastname"
-        android:ems="10"
-        android:id="@+id/txtLastName"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/txtFirstName"
-        android:layout_toEndOf="@+id/txtFirstName" />
+        android:layout_gravity="center_horizontal">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtProfession"
-        android:hint="@string/hint_profession"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/txtLastName"
-        android:layout_toEndOf="@+id/txtLastName" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_yes"
+                android:id="@+id/radioYes"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtStreet"
-        android:layout_below="@+id/txtFirstName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="@string/hint_street"
-        android:layout_toLeftOf="@+id/txtLastName"
-        android:layout_toStartOf="@+id/txtLastName" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtCity"
-        android:layout_below="@+id/txtLastName"
-        android:layout_toRightOf="@+id/txtFirstName"
-        android:hint="@string/hint_city"
-        android:layout_toLeftOf="@+id/txtProfession"
-        android:layout_toStartOf="@+id/txtProfession" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dropProvince"
-        android:layout_alignTop="@+id/txtCity"
-        android:layout_toRightOf="@+id/txtCity"
-        android:layout_toEndOf="@+id/txtCity"
-        android:spinnerMode="dropdown" />
-</RelativeLayout>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_no"
+                android:id="@+id/radioNo"
+                android:checked="true"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </RadioGroup>
+</LinearLayout>

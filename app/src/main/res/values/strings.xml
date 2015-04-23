@@ -10,7 +10,16 @@
     <string name="title_activity_application">ApplicationActivity</string>
     <string name="hint_street">Street</string>
     <string name="hint_city">City</string>
+    <string name="hint_postalcode">Postal Code</string>
+    <string name="hint_homephone">Home Phone</string>
+    <string name="hint_workphone">Work Phone</string>
+    <string name="hint_mobile">Mobile</string>
+    <string name="hint_mail">Email</string>
+    <string name="receive_mail">Would you like to receive occasional information via email about Light Energy, In Light Wellness Systems and Whole Health at Home?</string>
+    <string name="radio_yes">Yes</string>
+    <string name="radio_no">No</string>
     <string-array name="provinces_array">
+        <item>Province</item>
         <item>AB</item>
         <item>BC</item>
         <item>MB</item>

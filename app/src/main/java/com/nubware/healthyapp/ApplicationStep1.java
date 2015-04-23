@@ -1,5 +1,7 @@
 package com.nubware.healthyapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -63,9 +65,9 @@ public class ApplicationStep1 extends WizardStep {
         //Otros Controles
         provincesSpin = (Spinner) v.findViewById(R.id.dropProvince);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.provinces_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.provinces_array, R.layout.spinner_item);
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         provincesSpin.setAdapter(adapter);
 
