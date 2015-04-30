@@ -12,13 +12,13 @@ import org.codepond.wizardroid.WizardFragment;
 /**
  * Created by ACOLOR on 2015-04-28.
  */
-public class CustomWizard extends WizardFragment {
+public class CustomWizard {
     //You must have an empty constructor according to Fragment documentation
     public CustomWizard() {
     }
     /**
      * Binding the layout and setting buttons hooks
-     */
+     *//*
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View wizardLayout = inflater.inflate(R.layout.wizard, container, false);
@@ -42,10 +42,10 @@ public class CustomWizard extends WizardFragment {
                 .create();                              //to create the wizard flow.
     }
 
-    /**
+    *//**
      * Triggered when the wizard is completed.
      * Overriding this method is optional.
-     */
+     *//*
     @Override
     public void onWizardComplete() {
         //Do whatever you want to do once the Wizard is complete
@@ -69,13 +69,13 @@ public class CustomWizard extends WizardFragment {
         updateWizardControls();
     }
 
-    /**
+    *//**
      * Updates the UI according to current step position
-     */
+     *//*
     private void updateWizardControls() {
         previousButton.setEnabled(!wizard.isFirstStep());
         nextButton.setText(wizard.isLastStep()
                 ? R.string.action_finish
                 : R.string.action_next);
-    }
+    }*/
 }

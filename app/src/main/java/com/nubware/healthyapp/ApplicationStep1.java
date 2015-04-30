@@ -26,23 +26,43 @@ public class ApplicationStep1 extends WizardStep {
     private String lastname;
     @ContextVariable
     private String profession;
+    @ContextVariable
+    private String street;
+    @ContextVariable
+    private String city;
+    @ContextVariable
+    private String province;
+    @ContextVariable
+    private String postalcode;
+    @ContextVariable
+    private String homephone;
+    @ContextVariable
+    private String workphone;
+    @ContextVariable
+    private String mobile;
+    @ContextVariable
+    private String email;
+    @ContextVariable
+    private String receiveinfo;
 
     EditText firstNameEt;
     EditText lastNameEt;
     EditText professionEt;
-    //Otros controles
+    EditText streetEt;
+    EditText cityEt;
     Spinner provincesSpin;
+    EditText postalcodeEt;
+    EditText homephoneEt;
+    EditText workphoneEt;
+    EditText mobileEt;
+    EditText emailEt;
 
     Boolean firstNameFlag = false;
     Boolean lastNameFlag = false;
 
     public ApplicationStep1(){}
 
-    private void fillProvinces(Spinner dropProvinces){
-
-    }
-
-    private TextWatcher textWatcher = new TextWatcher() {
+    /*private TextWatcher textWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
@@ -53,7 +73,7 @@ public class ApplicationStep1 extends WizardStep {
         public void afterTextChanged(Editable s) {
             activateNext();
         }
-    };
+    };*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -62,8 +82,20 @@ public class ApplicationStep1 extends WizardStep {
         firstNameEt = (EditText) v.findViewById(R.id.txtFirstName);
         lastNameEt = (EditText) v.findViewById(R.id.txtLastName);
         professionEt = (EditText) v.findViewById(R.id.txtProfession);
-        //Otros Controles
+        streetEt = (EditText) v.findViewById(R.id.txtStreet);
+        cityEt = (EditText) v.findViewById(R.id.txtCity);
         provincesSpin = (Spinner) v.findViewById(R.id.dropProvince);
+        postalcodeEt = (EditText) v.findViewById(R.id.txtPostalCode);
+        homephoneEt = (EditText) v.findViewById(R.id.txtHomePhone);
+        workphoneEt = (EditText) v.findViewById(R.id.txtWorkPhone);
+        mobileEt = (EditText) v.findViewById(R.id.txtMobile);
+        emailEt = (EditText) v.findViewById(R.id.txtEmail);
+
+        firstNameEt.setText(firstname);
+        lastNameEt.setText(lastname);
+        professionEt.setText(profession);
+        streetEt.setText(street);
+        cityEt.setText(city);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.provinces_array, R.layout.spinner_item);
 
@@ -71,9 +103,11 @@ public class ApplicationStep1 extends WizardStep {
 
         provincesSpin.setAdapter(adapter);
 
-        firstNameEt.setText(firstname);
-        lastNameEt.setText(lastname);
-        professionEt.setText(profession);
+        postalcodeEt.setText(postalcode);
+        homephoneEt.setText(homephone);
+        workphoneEt.setText(workphone);
+        mobileEt.setText(mobile);
+        emailEt.setText(email);
 
         //firstNameEt.addTextChangedListener(textWatcher);
         //lastNameEt.addTextChangedListener(textWatcher);
@@ -96,6 +130,14 @@ public class ApplicationStep1 extends WizardStep {
         firstname = firstNameEt.getText().toString();
         lastname = lastNameEt.getText().toString();
         profession = professionEt.getText().toString();
+        street = streetEt.getText().toString();
+        city = cityEt.getText().toString();
+        //province = provincesSpin.getSelectedItem().toString(); //???????
+        postalcode = postalcodeEt.getText().toString();
+        homephone = homephoneEt.getText().toString();
+        workphone = workphoneEt.getText().toString();
+        mobile = mobileEt.getText().toString();
+        email = emailEt.getText().toString();
     }
 
     private void activateNext(){
