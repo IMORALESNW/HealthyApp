@@ -43,12 +43,12 @@
     <string name="you_have">Do you have:</string>
     <string name="acne">Acne</string>
     <string name="allergies">Allergies</string>
-    <string name="alzheimer">Alzheimer's</string>
+    <string name="alzheimer">Alzheimer</string>
     <string name="arthritis">Arthritis</string>
     <string name="circadian">Circadian Rhythm / Sleep Problems</string>
     <string name="circulation">Circulation Problems</string>
     <string name="chronic">Chronic Pain</string>
-    <string name="dermatological">Dermatological Issues (i.e. psoriasis, exzema, etc.)</string>
+    <string name="dermatological">Dermatological Issues(psoriasis, exzema, etc)</string>
     <string name="depression">Depression / Mood Disorder / PTSD</string>
     <string name="diabetes">Diabetes</string>
     <string name="fibro">Fibromyalgia</string>
@@ -66,5 +66,9 @@
     <string name="hint_top1">Concern 1</string>
     <string name="hint_top2">Concern 2</string>
     <string name="hint_top3">Concern 3</string>
+    <string name="read_waiver">I have read this Release prior to signing and I understand its effect. I am aware that by signing this Release I am waiving certain legal rights, which I or my heirs, next of kin, executors, administrators and assigns may otherwise have had against Releasees.</string>
+    <string name="hint_printname">Print Name</string>
+    <string name="hint_initial">Initial</string>
+    <string name="hint_witnessname">Witness Name</string>
     <string name="external_dir">Directory</string>
 </resources>

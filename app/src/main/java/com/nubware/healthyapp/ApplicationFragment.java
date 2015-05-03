@@ -33,6 +33,8 @@ public class ApplicationFragment extends BasicWizardLayout {
 
         return new WizardFlow.Builder()
                 .addStep(ApplicationStep1.class)
+                .addStep(ApplicationStep2.class)
+                .addStep(ApplicationStep3.class)
                 .addStep(ApplicationSummary.class)
                 .create();
     }

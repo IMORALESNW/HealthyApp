@@ -14,7 +14,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     public SQLiteHelper(Context context)
     {
-        super(context, DATABASE_NAME, null,DATABASE_VERSION);
+       super(context, DATABASE_NAME, null,DATABASE_VERSION);
     }
 
 
@@ -31,7 +31,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     public void open()
     {
-        getWritableDatabase();
+       getWritableDatabase();
     }
 
     public void create()

@@ -3,32 +3,39 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/taking_med"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp" />
+        android:layout_gravity="center_horizontal" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
+        android:inputType="textCapWords"
         android:id="@+id/txtTakingMed" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/help_us"
-        android:layout_gravity="left"
-        android:layout_marginTop="10dp" />
+        android:layout_gravity="left" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/are_you"
         android:layout_gravity="left"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="8dp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -150,7 +157,7 @@
         android:layout_height="wrap_content"
         android:text="@string/you_have"
         android:layout_gravity="left"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="8dp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -761,7 +768,7 @@
         android:layout_height="wrap_content"
         android:text="@string/interested"
         android:layout_gravity="left"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="8dp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -919,27 +926,31 @@
         android:layout_height="wrap_content"
         android:text="@string/top_areas"
         android:layout_gravity="left"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_top1"
+        android:inputType="textCapWords"
         android:id="@+id/txtConcern1" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
+        android:inputType="textCapWords"
         android:hint="@string/hint_top2"
         android:id="@+id/txtConcern2" />
 
-    <EditText
+    </LinearLayout>
+
+    </ScrollView>
+    <!--<EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:hint="@string/hint_top3"
-        android:id="@+id/txtConcern3" />
+        android:id="@+id/txtConcern3" />-->
 
     <!--<LinearLayout
         android:layout_width="fill_parent"
