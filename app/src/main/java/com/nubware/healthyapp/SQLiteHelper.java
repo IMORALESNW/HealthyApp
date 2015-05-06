@@ -21,7 +21,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-        Prospect.create(db);
+        TBProspect.create(db);
+        TBInterestedConcepts.create(db);
     }
 
     @Override

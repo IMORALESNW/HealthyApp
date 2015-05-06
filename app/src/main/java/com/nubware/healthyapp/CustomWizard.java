@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import org.codepond.wizardroid.WizardFlow;
+
 import org.codepond.wizardroid.WizardFragment;
 
 /**
@@ -34,12 +35,12 @@ public class CustomWizard {
     //using WizardFlow.Builder as shown in this example
     @Override
     public WizardFlow onSetup() {
-        return new WizardFlow.Builder()
-                .setActivity(this)                      //First, set the hosting activity for the wizard
-                .setContainerId(R.id.step_container)    //then set the layout container for the steps.
-                .addStep(TutorialStep1.class)           //Add your steps in the order you want them
-                .addStep(TutorialStep2.class)           //to appear and eventually call create()
-                .create();                              //to create the wizard flow.
+
+        return new org.codepond.wizardroid.WizardFlow.Builder()
+                .setActivity(this)
+                //.setContainerId(R.id.step_container)
+                .addStep(ApplicationStep1.class)
+                .create();
     }
 
     *//**

@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 /**
  * Created by IMORALES on 28/04/2015.
  */
-public class Demonstrator {
-    public long IDDemonstrator;
+public class TBDemonstrator {
+    public String IDDemonstrator;
     public String Name;
     public String KeyD;
     public String Mobile;
@@ -28,7 +28,7 @@ public class Demonstrator {
         database.execSQL(createTable);
     }
 
-    public static void newDemonstrator(Demonstrator nDemostrator, SQLiteDatabase database)
+    public static void newDemonstrator(TBDemonstrator nDemostrator, SQLiteDatabase database)
     {
         ContentValues valuesDemos = new ContentValues();
 
@@ -39,6 +39,6 @@ public class Demonstrator {
         valuesDemos.put("Email",nDemostrator.Email);
         valuesDemos.put("Estatus",nDemostrator.Estatus);
 
-        long newRowID = database.insert("Demonstrator",null,valuesDemos);
+        long newRowID = database.insert("TBDemonstrator",null,valuesDemos);
     }
 }

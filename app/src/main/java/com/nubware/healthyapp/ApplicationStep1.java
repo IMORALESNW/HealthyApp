@@ -20,6 +20,7 @@ import org.codepond.wizardroid.persistence.ContextVariable;
  * Created by ACOLOR on 2015-04-03.
  */
 public class ApplicationStep1 extends WizardStep {
+
     @ContextVariable
     private String firstname;
     @ContextVariable
@@ -44,6 +45,7 @@ public class ApplicationStep1 extends WizardStep {
     private String email;
     @ContextVariable
     private String receiveinfo;
+
 
     EditText firstNameEt;
     EditText lastNameEt;

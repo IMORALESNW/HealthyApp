@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 /**
  * Created by IMORALES on 28/04/2015.
  */
-public class FeedBack {
+public class TBFeedBack {
 
     public long IDFeedBack;
     public long IDProspect;
@@ -40,7 +40,7 @@ public class FeedBack {
         database.execSQL(createTable);
     }
 
-    public static long newFeedBack(FeedBack nFeedBack, SQLiteDatabase database)
+    public static long newFeedBack(TBFeedBack nFeedBack, SQLiteDatabase database)
     {
         ContentValues valuesFeedback = new ContentValues();
 
@@ -55,6 +55,6 @@ public class FeedBack {
         valuesFeedback.put("AdditionalQuestion",nFeedBack.AdditionalQuestion);
         valuesFeedback.put("RegistrationDate",nFeedBack.RegistrationDate);
 
-        return database.insert("FeedBack",null,valuesFeedback);
+        return database.insert("TBFeedBack",null,valuesFeedback);
     }
 }
